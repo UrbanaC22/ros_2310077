@@ -59,6 +59,6 @@ array_data.data[1]=distance;
 sd_pub.publish(&array_data);
 
 nh.spinOnce();
-delay(1000);
+delay(100);
 
 }
