@@ -17,14 +17,14 @@ class sensor_node:
     
      velocity=Twist()
 
-     velocity.linear.x=sensor_data[0]
+     velocity.linear.x=float(sensor_data[0])
 
     
      while sensor_data[1]<=20:
           velocity.linear.x=0
-          velocity.angular.z=sensor_data[0]
+          velocity.angular.z=float(sensor_data[0])
 
-     velocity.linear.x=sensor_data[0]
+     velocity.linear.x=float(sensor_data[0])
 
 
           
@@ -32,5 +32,5 @@ class sensor_node:
 
 if __name__=='__main__':
    node= sensor_node()
-   rospy.spin
+   rospy.spin()
 
