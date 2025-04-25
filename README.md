@@ -2,7 +2,7 @@
   Husarnet is a Peer-to-Peer VPN using which several devices, microcontrollers, servers can be connected over the Internet. For ERC Remote 2025, Husarnet is going to be the means of communication between the robots provided by
   the operator(Husarion) and the devices of the participants. 
 
-#### A video demonstrating the operation of Husarnet can be found at https://drive.google.com/file/d/1tWuOgJ2B7OfTShkfv-i7IGnrBolxqNka/view?usp=drive_link
+##### A video demonstrating the operation of Husarnet can be found at https://drive.google.com/file/d/1tWuOgJ2B7OfTShkfv-i7IGnrBolxqNka/view?usp=drive_link.
 
 ## Husarnet Network
 
@@ -37,13 +37,13 @@
    sudo apt update
    sudo apt install snapd
    ```
-   Alternatively, you can also install the WebUI from https://snapcraft.io/husarion-webui and set the parameters and configure the WEBUI according to the instructions provided in the website.
+   Alternatively, you can also install the WebUI from https://snapcraft.io/husarion-webui and set the parameters and configure the WebUI according to the instructions provided in the website.
 
    Start the WebUI using the following command:
    ```
    sudo husarion-webui.start
    ```
-   The WebUI can then be accessed by entering this address in your web browser: http://localhost:8080/ui .
+   The WebUI can then be accessed by entering this address in your web browser: http://localhost:8080/ui.
    Upon launching the Gazebo simulation, the robot can be controlled using the WebUI.
 
    To stop the WebUI, use
@@ -53,7 +53,7 @@
 
 ## Conneting ROS2 via Husarnet
    Husarnet can be used for the communication of ROS2 nodes running in several devices connected to the same network. Although a discovery server is to be used for the ERC Remote 2025, until further clarification from
-   the operator, the custom CycloneDDS xml env shall be used for the demonstration. Other methods to connect the ROS2 nodes can be found at https://husarnet.com/docs/tutorial-ros2/
+   the operator, the custom CycloneDDS xml env shall be used for the demonstration. Other methods to connect the ROS2 nodes can be found at https://husarnet.com/docs/tutorial-ros2/.
 
    To create the custom CycloneDDS file execute the following commands:
    ```
@@ -108,9 +108,16 @@
  ```
  ros2 topic echo /hello
  ```
+ If the topic fails to be echoed, restart ROS2 by executing:
+ ```
+ ros2 daemon stop
+ ros2 daemon start
+ ```
+ Publish the string to the topic again afterwards.
+
  After the ROS2 nodes have been connected, the Gazebo simulation can be run in one of the devices and remotely controlled using a GUI from another, for example.
 
- More information about Husarnet can be found at https://husarnet.com/docs/
+ More information about Husarnet can be found at https://husarnet.com/docs/.
  
  
    
